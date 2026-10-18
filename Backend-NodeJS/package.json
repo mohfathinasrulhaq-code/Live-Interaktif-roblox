@@ -1,0 +1,26 @@
+{
+  "name": "tiktok-roblox-backend",
+  "version": "1.0.0",
+  "description": "Server perantara direct integration antara TikTok Live dan Roblox Studio",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "tunnel": "npx localtunnel --port 3000",
+    "tunnel:pinggy": "ssh -p 443 -R0:localhost:3000 a.pinggy.io",
+    "tunnel:cloudflare": "npx cloudflared tunnel --url http://localhost:3000"
+  },
+  "keywords": [
+    "tiktok-live",
+    "roblox",
+    "roblox-studio",
+    "interactive"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "tiktok-live-connector": "^2.5.0"
+  }
+}
